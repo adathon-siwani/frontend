@@ -21,7 +21,7 @@
 }
 
 #app_name {
-    width: 70vw;
+    width: 60%;
     display: flex;
     padding: 25px 0 0 5px;
     flex-direction: column;
@@ -37,10 +37,11 @@
 
 #description{
     font-size: 18px;
+    padding-bottom: 10px;
 }
 
 #img{
-    width: 30vw;
+    width: 120px;
     height: 70px;
     padding: 10px 5px;
     
@@ -48,6 +49,7 @@
 
 #img img{
     width: 100%;
+    margin-left: 10px;
     
 }
 
@@ -96,6 +98,13 @@
 
 }
 
+.text_body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 40px;
+}
+
 
 #container h5, .fechas{
     font-weight: 400;
@@ -116,8 +125,9 @@
     border: 1px solid var(--color-button);
     color: white;
     outline: none; 
-    font-weight: bolder;
     font-size: 12px;
+    padding: 7px;
+    border-radius: 2px;
 }
 
 button:hover{

@@ -13,7 +13,7 @@ function getData (){
                         </div>
                         <div class="texto_grupo">
                         
-                        <div class:"text_body">
+                        <div class="text_body">
                         <h5> En producción: ${comunidades[i].produccion}</h5> 
                         <h5 class = "fechas"> Próxima Entrega: ${fechaActual}</h5>
                         </div>
