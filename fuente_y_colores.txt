@@ -1,0 +1,11 @@
+Fuente: Evolve Sans (normal, negrita, espaciada)
+
+colores:
+gris_oscuro: #545454 (barra 3ra pantalla)
+gris_claro_beige: #F0ECE9 (cuadro de texto msje-borde)
+gris_claro: #F1F0F0 (menú superior)
+gris_mas_claro: #F9F9FA (cuadro de texto msje-fondo)
+color_botones: #C7821C
+color_cancelar: #C84737
+
+
