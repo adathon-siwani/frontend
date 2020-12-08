@@ -9,7 +9,7 @@ function getData (){
                         <div class = "grupo" id= "grupo${comunidades[i].id}"> 
                         <div class="title">
                         
-                        <h4> ${comunidades[i].nombre} - Delegada: ${comunidades[i].delegada}</h4>
+                        <h4> ${comunidades[i].nombre}</h4><h4>Delegada: ${comunidades[i].delegada}</h4>
                         </div>
                         <div class="texto_grupo">
                         
@@ -18,7 +18,7 @@ function getData (){
                         <h5 class = "fechas"> Próxima Entrega: ${fechaActual}</h5>
                         </div>
                         
-                        <div class="botón_grupo">
+                        <div class="boton_grupo">
                         <button class ="button">VER DETALLE</button>
                         </div>
                         </div>`
