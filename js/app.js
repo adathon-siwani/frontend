@@ -24,6 +24,18 @@ function getData (){
                         </div>`
                       container.innerHTML += contenido;
                   }
+
+
+                  const button = document.getElementsByClassName("button");
+
+                    var i = 0;
+                    for (let i=0; i< button.length; i++){
+                            button[i].addEventListener("click", ()=>{
+                                console.log("Este es el grupo: " + comunidades[i].id);
+                            })
+                           
+};
+
         }
       
 
@@ -85,11 +97,3 @@ const comunidades =
         
 getData();
 
-const button = document.getElementsByClassName("button");
-
-var i = 0;
-for (let i=0; i< button.length; i++){
-    button[i].addEventListener("click", function(){
-       console.log("Este es el grupo: " + comunidades[i].id);
-    })
-};
