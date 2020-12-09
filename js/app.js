@@ -1,10 +1,13 @@
 const container = document.getElementById("container");
 
+let comunidadID = 1;
+let contenido = ''
 
 function getData (){
     for (let i =0; i<comunidades.length; i++){
         var fechaActual = comunidades[i].entrega.slice(1,11);
-        const contenido = 
+        comunidadID = comunidades[i].id;
+        contenido = 
                       `
                         <div class = "grupo" id= "grupo${comunidades[i].id}"> 
                         <div class="title">
@@ -23,21 +26,25 @@ function getData (){
                         </div>
                         </div>`
                       container.innerHTML += contenido;
-                  }
+                    }
 
-
-                  const button = document.getElementsByClassName("button");
-
-                    var i = 0;
-                    for (let i=0; i< button.length; i++){
-                            button[i].addEventListener("click", ()=>{
-                                console.log("Este es el grupo: " + comunidades[i].id);
-                            })
-                           
+                    const button = document.getElementsByClassName("button"); 
+                    for (let i=0; i < button.length; i++) {
+                    button[i].addEventListener("click", () => {mostrarComunidad(comunidades[i])})
+    }                              
 };
 
-        }
+     
       
+let mostrarComunidad = (comunidadID) => {
+    console.log("Este es el grupo: " + comunidadID.id)
+    container.innerHTML = ''
+    contenido =
+                      `<h1>Comunidad ${comunidadID.delegada}</h1>`
+
+    container.innerHTML += contenido
+                        
+}
 
 const comunidades =
         [
