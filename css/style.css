@@ -53,12 +53,14 @@
     
 }
 
-
 #first-section{
     width: 100vw;
     height: 40px;
     background-color:#F1F0F0;
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
 }
 
 #first-section p{
@@ -121,7 +123,7 @@
     margin-top: 0px;
 }
 
-.grupo button{
+.grupo button {
     background-color: var(--color-button);
     border: 1px solid var(--color-button);
     color: white;
@@ -129,6 +131,28 @@
     font-size: 12px;
     padding: 10px;
     border-radius: 2px;
+    margin-right: 15px;
+}
+
+.boton_volver {
+    background-color: var(--color-button);
+    border: 1px solid var(--color-button);
+    color: white;
+    outline: none;
+    width: 130px;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 2px;
+    margin-right: 25px;
+}
+
+.texto_grupo_comunidad {
+    width: 100%;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    
+
 }
 
 button:hover{
@@ -143,6 +167,72 @@ button:hover{
     background-color:#F1F0F0;
     padding: 10px 0;
 }
+
+
+.comunidad_individual_title p {
+    font-size: 15px;
+}
+.comunidad_individual {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.boton_mensaje_sin_pedido {
+    background-color: var(--color-button);
+    border: 1px solid var(--color-button);
+    color: white;
+    outline: none;
+    width: 150px;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 2px;
+    margin-right: 5px;
+    }
+.otra_info {
+    margin: 0 0 45px 15px;
+}
+
+.separator {
+    background-color:#F1F0F0;
+    width: 100%;
+    height: 15px;
+}
+
+#en_producción {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 25px 15px;
+    margin-bottom: 25px;
+    
+}
+
+#en_producción img {
+    width: 115px;
+    margin-bottom: 15px;
+
+}
+
+.card {
+    width: 115px;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    margin-bottom: 25px;
+    
+
+}
+
+.card p{
+    font-size: 11px;
+    text-align: center;
+}
+
+
+
+
 
 
 @media (max-width: 350px) {
@@ -196,5 +286,7 @@ button:hover{
         margin-top: 10px;
         padding: 10px;
     }
+
+    
     
   }
