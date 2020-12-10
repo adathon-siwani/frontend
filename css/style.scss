@@ -1,0 +1,308 @@
+$borde: 2px solid #545454;
+$color-secundario: rgb(228, 227, 227);
+$color-button: #C7821C;
+$color-letra: #545454;
+$color-fondo: #F1F0F0;
+
+//***********************************************
+// GENERAL Y HTML BASE
+//***********************************************
+
+* {
+	margin: 0;
+	font-family: 'Spartan';
+	color:$color-letra;
+	box-sizing: border-box;
+}
+
+#nav {
+	width: 100vw;
+	height: 98px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	background-color: white;
+
+  #img {
+    width: 120px;
+    height: 70px;
+    padding: 20px 5px 0 5px;
+	  
+    img {
+      width: 100%;
+      margin-left: 10px;
+	  }
+  }
+  
+  #app_name {
+    width: 60%;
+    display: flex;
+    padding: 25px 0 0 5px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #F1F0F0;
+    
+    h1 {
+		  font-size: 24px;
+		  letter-spacing: 5px;
+	  }
+    
+    #description {
+	    font-size: 18px;
+	    padding-bottom: 10px;
+    }
+  }
+}
+
+#first-section {
+	width: 100vw;
+	height: 40px;
+	background-color: $color-fondo;
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	
+  p {
+		margin-left: 10px;
+		padding-top: 10px;
+		font-weight: 600;
+	}
+}
+
+#footer {
+	width: 100vw;
+	height: 40px;
+	text-align: center;
+	background-color: $color-fondo;
+	padding: 10px 0;
+}
+
+//***********************************************
+// PÁGINA 1
+//***********************************************
+
+#container {
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	
+  .grupo {
+    width: 100%;
+    height: 110px;
+    border-bottom: 7px solid $color-fondo;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    .title {
+	    width: 100%;
+	    display: flex;
+
+      h4 {
+        font-weight: 600;
+        font-size: 14px;
+        margin: 10px 0px 0px 15px;
+	    }
+    }
+
+    .texto_grupo {
+      width: 100%;
+      padding: 0 15px;
+      display: flex;
+      justify-content: space-between;
+
+      .text_body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 40px;
+
+        h5 {
+        font-weight: 400;
+        font-size: 12px;
+	      }
+        .fechas {
+          font-weight: 400;
+          font-size: 12px;
+        }
+      }
+    }	    
+	
+    button {
+      background-color: $color-button;
+      border: 1px solid $color-button;
+      color: white;
+      outline: none;
+      font-size: 12px;
+      padding: 10px;
+      border-radius: 2px;
+      margin-right: 15px;
+	  }
+  }
+}
+
+//***********************************************
+// PÁGINA 2
+//***********************************************
+
+.comunidad_individual_title {
+	p {
+		font-size: 15px;
+	}
+}
+
+.boton_volver {
+	background-color: $color-button;
+	border: 1px solid $color-button;
+	color: white;
+	outline: none;
+	width: 130px;
+	font-size: 15px;
+	padding: 10px;
+	border-radius: 2px;
+	margin-right: 25px;
+}
+
+.comunidad_individual {
+	height: 150px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+
+  h4 {
+    font-weight: 600;
+    font-size: 14px;
+    margin: 10px 0px 0px 15px;  
+  }
+
+  .texto_grupo_comunidad {
+    width: 100%;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+
+    h5 {
+      font-weight: 400;
+      font-size: 12px;
+	  }
+
+    .boton_mensaje_sin_pedido {
+      background-color: $color-button;
+      border: 1px solid $color-button;
+      color: white;
+      outline: none;
+      width: 150px;
+      font-size: 12px;
+      padding: 10px;
+      border-radius: 2px;
+      margin-right: 5px;
+    }
+  }
+
+  .otra_info {
+	  margin: 0 0 45px 15px;
+
+    h5 {
+      font-weight: 400;
+      font-size: 12px;
+	  }
+  }
+}
+
+.separator {
+	background-color: $color-fondo;
+	width: 100%;
+	height: 15px;
+}
+
+#en_producción {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	padding: 25px 15px;
+	margin-bottom: 25px;
+	
+  .card {
+    width: 115px;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    margin-bottom: 25px;
+  
+    img {
+		  width: 115px;
+		  margin-bottom: 15px;
+	  }
+	
+    p {
+		font-size: 11px;
+		text-align: center;
+	  }
+}
+}
+
+//***********************************************
+// PSEUDOCLASES
+//***********************************************
+
+button {
+	&:hover {
+		cursor: grab;
+	}
+}
+
+//***********************************************
+// MEDIA QUERIES
+//***********************************************
+
+@media (max-width: 350px) {
+	#nav {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		height: 180px;
+		margin-bottom: 20px;
+	}
+	#img {
+		width: 120px;
+		height: 70px;
+		padding: 20px 0px;
+		margin-bottom: 30px;
+	}
+	#app_name {
+		width: 100%;
+		h1 {
+			font-size: 22px;
+			margin-bottom: 10px;
+		}
+	}
+	#first-section {
+		p {
+			text-align: center;
+		}
+	}
+	.grupo {
+		width: 100%;
+		height: 180px;
+		border-bottom: 5px solid $color-fondo;
+		padding-bottom: 10px;
+	}
+	.title {
+		display: block;
+		text-align: center;
+	}
+	.texto_grupo {
+		display: block;
+		text-align: center;
+	}
+	.boton_grupo {
+		button {
+			margin-top: 10px;
+			padding: 10px;
+		}
+	}
+}
