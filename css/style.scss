@@ -90,7 +90,7 @@ $color-fondo: #F1F0F0;
 	
   .grupo {
     width: 100%;
-    height: 120px;
+    height: 170px;
     border-bottom: 7px solid $color-fondo;
     display: flex;
     flex-direction: column;
@@ -98,8 +98,8 @@ $color-fondo: #F1F0F0;
     align-items: center;
 
     .title {
-	    width: 100%;
-		display: flex;
+		width: 100%;
+		margin-bottom: 10px;
       h4 {
         font-weight: 600;
 		font-size: 17px;
