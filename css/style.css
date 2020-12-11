@@ -105,7 +105,7 @@
 
 #container .grupo {
   width: 100%;
-  height: 110px;
+  height: 170px;
   border-bottom: 7px solid #F1F0F0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -123,14 +123,12 @@
 
 #container .grupo .title {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin-bottom: 10px;
 }
 
 #container .grupo .title h4 {
   font-weight: 600;
-  font-size: 14px;
+  font-size: 17px;
   margin: 10px 0px 0px 15px;
 }
 
@@ -155,7 +153,7 @@
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  height: 40px;
+  height: 50px;
 }
 
 #container .grupo .texto_grupo .text_body h5 {
@@ -173,10 +171,11 @@
   border: 1px solid #C7821C;
   color: white;
   outline: none;
-  font-size: 12px;
-  padding: 10px;
+  font-size: 13.5px;
+  padding: 13px;
   border-radius: 2px;
   margin-right: 15px;
+  margin-bottom: 10px;
 }
 
 .comunidad_individual_title p {
@@ -445,7 +444,7 @@ button:hover {
   cursor: grab;
 }
 
-@media (max-width: 350px) {
+@media (max-width: 408px) {
   #nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -462,39 +461,36 @@ button:hover {
     height: 180px;
     margin-bottom: 20px;
   }
-  #img {
+  #nav #img {
     width: 120px;
     height: 70px;
-    padding: 20px 0px;
     margin-bottom: 30px;
   }
-  #app_name {
-    width: 100%;
+  #nav #app_name {
+    width: 100vw;
+    background-attachment: green;
   }
-  #app_name h1 {
+  #nav #app_name h1 {
     font-size: 22px;
     margin-bottom: 10px;
   }
-  #first-section p {
+  #first-section {
     text-align: center;
   }
-  .grupo {
-    width: 100%;
-    height: 180px;
-    border-bottom: 5px solid #F1F0F0;
+  #container .grupo {
+    height: 220px;
+    text-align: center;
     padding-bottom: 10px;
   }
-  .title {
+  #container .grupo .title {
     display: block;
-    text-align: center;
   }
-  .texto_grupo {
+  #container .grupo .texto_grupo {
     display: block;
-    text-align: center;
   }
-  .boton_grupo button {
-    margin-top: 10px;
-    padding: 10px;
+  #container .grupo .texto_grupo .button {
+    margin-top: 20px;
+    padding: 17px;
   }
 }
 /*# sourceMappingURL=style.css.map */
