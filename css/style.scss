@@ -220,16 +220,17 @@ $color-fondo: #F1F0F0;
 
 #en_producción {
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-left: 55px;
+
 	padding: 25px 15px;
 	margin-bottom: 25px;
 	
   .card {
-    width: 115px;
+    width: 250px;
     display: flex;
-    align-content: center;
-    flex-direction: column;
+		align-content: center;
     margin-bottom: 25px;
   
     img {
@@ -237,11 +238,32 @@ $color-fondo: #F1F0F0;
 		  margin-bottom: 15px;
 	  }
 	
-    p {
-		font-size: 11px;
-		text-align: center;
+    .card-text {
+		font-size: 12px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		margin-left: 15px;
 	  }
+	}
 }
+
+.botones_actualizar {
+	display: flex;
+	justify-content: space-evenly;
+	padding: 15px;
+	
+	button {
+		background-color: $color-button;
+		border: 1px solid $color-button;
+		color: white;
+		outline: none;
+		width: 140px;
+		font-size: 13px;
+		padding: 10px;
+		border-radius: 2px;
+	}
 }
 
 //***********************************************
