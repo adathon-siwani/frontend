@@ -127,6 +127,7 @@ let mostrarProduccion = (comunidadID) => {
     mostrar_productos();
 
 }
+// En la función mostrar_productos (abajo), habría que definir si se muestran TODOS los productos que tiene Niwok, o si se pueden filtrar o si vienen filtrados desde el back. Ver en Discord: https://discord.com/channels/669278924231933968/783341199968043058/787023046891667462
 
 let mostrar_productos = () => {
     productos_container = document.getElementsByClassName("productos_disponibles");
