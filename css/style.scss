@@ -267,6 +267,46 @@ $color-fondo: #F1F0F0;
 }
 
 //***********************************************
+// PÁGINA 2
+//***********************************************
+.produccion_title {
+	background-color: $color-letra;
+	width: 100vw;
+	p {
+	color: white;
+	font-size: 11px;
+	text-align: center;
+	}
+}
+
+.container_tres {
+	.title {
+		h4 {
+			font-size: 18px;
+			text-align: center;
+		}
+	}
+
+	.productos_disponibles {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.card_producto {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+
+			.imagen {
+				margin: 15px;
+			}
+		}
+	}
+}
+
+
+
+//***********************************************
 // PSEUDOCLASES
 //***********************************************
 

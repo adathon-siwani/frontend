@@ -68,17 +68,18 @@ let mostrarComunidad = (comunidadID) => {
                         <div id="en_producción">
                         </div>
                         <div class="botones_actualizar">
-                        <button>ACTUALIZAR PRODUCCIÓN</button>
-                        
-                        <button>HACER PEDIDO</button>
+                        <button class="actualizar_produccion">ACTUALIZAR PRODUCCIÓN</button>                        
+                        <button class="hacer_pedido">HACER PEDIDO</button>
                         </div>
-
-`
+                        `
 
     container.innerHTML += contenido
     ver_produccion()
     
-                       
+    const button_actualizar = document.getElementsByClassName("actualizar_produccion"); 
+        button_actualizar[0].addEventListener("click", () => {
+        mostrarProduccion(comunidadID)
+        })                  
 }
 
 let ver_produccion = () =>{
@@ -100,6 +101,55 @@ let contenido_produccion = ''
         `
         mostrar_produccion.innerHTML += contenido_produccion
     }}
+
+let mostrarProduccion = (comunidadID) => {
+    console.log("Producto para elegir")
+    las_comunidades_div = document.getElementsByClassName("comunidad_individual_title");
+    boton_volver = document.getElementsByClassName("boton_grupo");
+    boton_volver[0].innerHTML = '';
+    las_comunidades_div[0].innerHTML = '';
+    contenido_title = `
+                        <div class="produccion_title"><p>ACTUALIZAR PRODUCCIÓN DE ${comunidadID.nombre.toUpperCase()}</p></div>
+                        `;
+    las_comunidades_div[0].innerHTML += contenido_title
+    container.innerHTML = ''
+    container.className = "container_tres"
+    contenido =
+                      ` <div class = "vista_produccion"> 
+                        <div class="title">                        
+                        <h4>¿Qué productos necesitás?</h4>
+                        </div>
+                        <div class="productos_disponibles">
+                        </div>
+                        </div>
+                        `
+    container.innerHTML += contenido;
+    mostrar_productos();
+
+}
+
+let mostrar_productos = () => {
+    productos_container = document.getElementsByClassName("productos_disponibles");
+    productos_container[0].innerHTML = '';
+    for (let i = 0; i < produccion_comunidad_1.length; i++) {
+        contenido = `
+                    <div class="card_producto">
+                    <div class="casilla"> 
+                    <form method="GET" action="">
+                        <input type="checkbox" id="producto${i}" value="producto${i}">
+                    </form>
+                    </div>
+                    <div class="imagen">
+                        <img src="${produccion_comunidad_1[i].imagen}"/>
+                        <p>${produccion_comunidad_1[i].nombre}</p>
+                    </div>
+                    </div>
+
+                   `;
+        productos_container[0].innerHTML += contenido;
+    }
+}
+
 
 const comunidades =
         [
