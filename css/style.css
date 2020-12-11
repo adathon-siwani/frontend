@@ -331,6 +331,7 @@
 .produccion_title {
   background-color: #545454;
   width: 100vw;
+  padding-bottom: 4px;
 }
 
 .produccion_title p {
@@ -342,6 +343,72 @@
 .container_tres .title h4 {
   font-size: 18px;
   text-align: center;
+  margin-top: 20px;
+}
+
+.container_tres .title form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container_tres .title form textarea {
+  margin: 10px 0;
+  background-color: #F9F9FA;
+  outline: none;
+  border: 6px solid #F1F0F0;
+}
+
+.container_tres .title form .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 13px;
+}
+
+.container_tres .title form .input input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.container_tres .botones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 15px 0;
+}
+
+.container_tres .botones .confirmar {
+  background-color: #C7821C;
+  border: 1px solid #C7821C;
+  color: white;
+  outline: none;
+  width: 260px;
+  font-size: 13px;
+  padding: 10px;
+  border-radius: 2px;
+  margin-bottom: 15px;
+}
+
+.container_tres .botones .cancelar {
+  color: #C84737;
+  font-weight: 600;
+  border: none;
+  width: 80px;
+  height: 30px;
 }
 
 .container_tres .productos_disponibles {
