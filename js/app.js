@@ -121,6 +121,19 @@ let mostrarProduccion = (comunidadID) => {
                         </div>
                         <div class="productos_disponibles">
                         </div>
+                        <div class="title">                        
+                        <h4>¿Querés dejar una aclaración?</h4>
+                        <form method="POST" action="">
+                        <textarea id="comentario" name="comentario" rows="10" cols="30" placeholder="Necesitamos..."></textarea>
+                        <div class="input">
+                        <input type="checkbox">Enviar SMS/WhatsApp con la actualización
+                        </div>
+                        </form>
+                        </div>
+                        <div class="botones">
+                        <button class="confirmar">CONFIRMAR ACTUALIZACIÓN</button>
+                        <button class="cancelar">Cancelar</button>
+                        </div>
                         </div>
                         `
     container.innerHTML += contenido;
