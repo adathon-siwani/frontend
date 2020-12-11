@@ -66,7 +66,11 @@ let mostrarComunidad = (comunidadID) => {
                         </div>
                         <div class="separator"> </div>
                         <div id="en_producción">
-
+                        </div>
+                        <div class="botones_actualizar">
+                        <button>ACTUALIZAR PRODUCCIÓN</button>
+                        
+                        <button>HACER PEDIDO</button>
                         </div>
 
 `
@@ -84,11 +88,15 @@ let contenido_produccion = ''
     for (let i = 0; i < produccion_comunidad_1.length; i++){
          contenido_produccion = `
             <div class="card">
-            <img src="${produccion_comunidad_1[i].imagen}"/>
-            <p>${produccion_comunidad_1[i].nombre}</p>
-            <p>Color: ${produccion_comunidad_1[i].color}</p>
+                <div>
+                <img src="${produccion_comunidad_1[i].imagen}"/>
+                </div>
+                <div class="card-text">
+                <p>${produccion_comunidad_1[i].nombre}</p>
+                <p>Color: ${produccion_comunidad_1[i].color}</p>
+                <p>Entrega: ${produccion_comunidad_1[i].entrega}</p>
+                </div>
             </div>
-
         `
         mostrar_produccion.innerHTML += contenido_produccion
     }}
@@ -159,21 +167,24 @@ produccion_comunidad_1 = [
         nombre: 'Producto A',
         color: 'cobre',
         tejido: 'punto antiguo',
-        imagen: "img/sobres.png"
+        imagen: "img/sobres.png",
+        entrega: "fecha1"
     
     },
     { 
         nombre: 'Producto B',
         color: 'naranja',
         tejido: 'punto antiguo',
-        imagen: "img/portacelular_con_tira.png"
+        imagen: "img/portacelular_con_tira.png",
+        entrega: "fecha2"
     
     },
     { 
         nombre: 'Producto C',
         color: 'marrón',
         tejido: 'punto antiguo',
-        imagen: "img/cartera_punto_antiguo.png"
+        imagen: "img/cartera_punto_antiguo.png",
+        entrega: "fecha3"
     
     },
 ]
