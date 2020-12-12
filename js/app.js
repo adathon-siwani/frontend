@@ -127,7 +127,7 @@ let mostrarProduccion = (comunidadID) => {
                         <textarea id="comentario" name="comentario" rows="10" cols="30" placeholder="Necesitamos..."></textarea>
                         <div class="input">
                         <input type="checkbox" class ="checkbox">
-                            <span> Enviar SMS/WhatsApp con la actualización</span>
+                            <span> Enviar SMS/WhatsApp</span>
                         </div>
                         </form>
                         <div class="botones">
