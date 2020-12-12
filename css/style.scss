@@ -271,6 +271,8 @@ $color-fondo: #F1F0F0;
 .produccion_title {
 	background-color: $color-letra;
 	width: 100vw;
+	padding: 6px;
+	margin-bottom: 20px;
 	p {
 	color: white;
 	font-size: 11px;
@@ -279,6 +281,7 @@ $color-fondo: #F1F0F0;
 }
 
 .container_tres {
+	padding:10px;
 	.title {
 		h4 {
 			font-size: 18px;
@@ -290,6 +293,7 @@ $color-fondo: #F1F0F0;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		margin-bottom: 20px;
 
 		.card_producto {
 			display: flex;
@@ -298,8 +302,60 @@ $color-fondo: #F1F0F0;
 
 			.imagen {
 				margin: 15px;
+				height: 120px;
+				width: 120px;
+				padding: 10px;
+				img{
+					width: 100%;
+				}
 			}
 		}
+	}
+
+	#form{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		height: 310px;
+		width: 100vw;
+
+		form{
+			margin:auto;
+		}
+
+		textarea{
+			border-radius: 10px;
+			padding: 7px;
+			border: 3px solid $color-button;
+			display: block;
+   			margin-left: auto;
+    		margin-right: auto
+		}
+
+		.input{
+			margin-top: 20px;
+			margin-left: 10px;
+		}
+
+		.botones{
+			display: flex;
+			justify-content: space-around;
+
+
+		}
+		.button{
+			background-color: $color-button;
+			border: 1px solid $color-button;
+			color: white;
+			outline: none;
+			width: 140px;
+			font-size: 13px;
+			padding: 10px;
+			height: 45px;
+			border-radius: 2px;
+		}
+
+
 	}
 }
 
