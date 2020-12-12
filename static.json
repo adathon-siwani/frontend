@@ -4,5 +4,10 @@
     "/api/": {
       "origin": "https://adathon-siwani-be.herokuapp.com/"
     }
+  },
+  "headers": {
+    "/**": {
+      "Access-Control-Allow-Origin": "*"
+    }
   }
 }
