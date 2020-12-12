@@ -82,6 +82,7 @@ let mostrarComunidad = (comunidadID) => {
         })                  
 }
 
+
 let ver_produccion = () =>{
 console.log("se ve producción")
 let mostrar_produccion = document.getElementById("en_producción")

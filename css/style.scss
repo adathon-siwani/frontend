@@ -269,19 +269,19 @@ $color-fondo: #F1F0F0;
 // PÁGINA 2
 //***********************************************
 .produccion_title {
-	background-color: $color-letra;
 	width: 100vw;
 	padding: 6px;
 	margin-bottom: 20px;
 	p {
-	color: white;
-	font-size: 11px;
+	color: black;
+	font-size: 14px;
 	text-align: center;
 	}
 }
 
 .container_tres {
 	padding-top: 24px;
+	padding-bottom: 20px;
 	.title {
 		h4 {
 			font-size: 18px;
@@ -342,7 +342,7 @@ $color-fondo: #F1F0F0;
 			display: flex;
    			margin-left: auto;
     		margin-right: auto;
-			justify-content: space-around;
+			justify-content: space-between;
 			width: 370px;
 
 		}
@@ -357,8 +357,6 @@ $color-fondo: #F1F0F0;
 			height: 45px;
 			border-radius: 2px;
 		}
-
-
 	}
 }
 

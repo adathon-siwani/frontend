@@ -328,20 +328,20 @@
 }
 
 .produccion_title {
-  background-color: #545454;
   width: 100vw;
   padding: 6px;
   margin-bottom: 20px;
 }
 
 .produccion_title p {
-  color: white;
-  font-size: 11px;
+  color: black;
+  font-size: 14px;
   text-align: center;
 }
 
 .container_tres {
   padding-top: 24px;
+  padding-bottom: 20px;
 }
 
 .container_tres .title h4 {
@@ -425,8 +425,9 @@
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 370px;
 }
 
