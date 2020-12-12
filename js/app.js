@@ -171,8 +171,8 @@ const comunidades =
             {
             id:1,
             nombre: "Grupo La Mocha",
-            delegada: "Delegada1",
-            produccion: "Producto A",
+            delegada: "Teodora",
+            produccion: "Sobres",
             entrega:  "\"2008-01-01T12:00:00Z\"",
             imagen: "imagen",
             teléfono: 12345678
@@ -181,8 +181,8 @@ const comunidades =
             {
             id:2,
             nombre: "Grupo 2",
-            delegada: "Delegada2",
-            produccion: "Producto B",
+            delegada: "Marí",
+            produccion: "Carteras",
             entrega:  "\"2008-01-01T12:00:00Z\"",
             imagen : "imagen",
             teléfono: 12987678
