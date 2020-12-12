@@ -2,7 +2,7 @@
   "root": ".",
 	"proxies": {
     "/api/": {
-      "origin": "https://adathon-siwani.herokuapp.com/"
+      "origin": "https://adathon-siwani-be.herokuapp.com/"
     }
   }
 }
