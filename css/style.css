@@ -411,6 +411,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  outline: none;
 }
 
 .container_tres #form .input {
