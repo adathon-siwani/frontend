@@ -188,7 +188,7 @@ let mostrarComunidad = (comunidad) => {
       </div>
       <div class="texto_grupo_comunidad">
         <div class="text_body_comunidad">
-          <h5> Teléfono: ${comunidad.delegada.telefono}</h5>
+          <h5> Teléfono: <br>${comunidad.delegada.telefono}</h5>
         </div>
                           
         <div class="boton_grupo">
@@ -196,11 +196,12 @@ let mostrarComunidad = (comunidad) => {
         </div>
       </div>
       <div class="otra_info">
-        <h5> Otra información: </h5>
+        <h5> <br> Otra información: </h5>
       </div>
     </div>
     <div class="separator"> </div>
     <div id="en_producción">
+      <h2>    Artesanías en curso </h2>
     </div>
     <div class="botones_actualizar">
       <button class="actualizar_produccion">ACTUALIZAR PRODUCCIÓN</button>                        
@@ -294,7 +295,7 @@ let mostrarProduccion = (comunidad) => {
   contenido = ` 
     <div class = "vista_produccion"> 
       <div class="title">                        
-        <h4>¿Qué productos necesitás?</h4>
+        <h4>Seleccioná o deseleccioná los productos que necesites</h4>
       </div>
       <div class="productos_disponibles">
       </div>
@@ -304,7 +305,7 @@ let mostrarProduccion = (comunidad) => {
               <textarea id="comentario" name="comentario" rows="10" cols="30" placeholder="Necesitamos..." ></textarea>
               <div class="input">
                 <input type="checkbox" class ="checkbox" id="mensajeWhatsapp" >
-                  <span> Enviar SMS/WhatsApp</span>
+                  <span> Notificar con un SMS/WhatsApp <br>     la actualización</span>
               </div>
             </form>
             <div class="botones">
