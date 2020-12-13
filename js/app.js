@@ -125,7 +125,7 @@ let dibujarGrilla = (comunidades) => {
   for (let i = 0; i < comunidades.length; i++) {
     contenido = ` <div class = "grupo" id= "grupo${comunidades[i].id}"> 
                     <div class="title">                       
-                      <h4> Grupo ${comunidades[i].id}</h4><h4>Delegada: ${comunidades[i].nombre}</h4>
+                      <h4> Comunidad ${comunidades[i].nombre}</h4><h4>Delegada: ${comunidades[i].delegada.nombre}</h4>
                     </div>
                     <div class="texto_grupo">                       
                       <div class="text_body">
@@ -304,7 +304,7 @@ let mostrarProduccion = (comunidad) => {
             <form method="POST" action="">
               <textarea id="comentario" name="comentario" rows="10" cols="30" placeholder="Necesitamos..." ></textarea>
               <div class="input">
-                <input type="checkbox" class ="checkbox" id="mensajeWhatsapp" >
+                <input type="checkbox" class ="checkbox" checked id="mensajeWhatsapp" >
                   <span> Notificar con un SMS/WhatsApp <br>     la actualización</span>
               </div>
             </form>
