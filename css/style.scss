@@ -188,7 +188,8 @@ $color-fondo: #F1F0F0;
 }
 
 .comunidad_individual {
-	height: 150px;
+	padding-top :20px;
+	height: 160px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
@@ -196,7 +197,7 @@ $color-fondo: #F1F0F0;
   h4 {
     font-weight: 600;
     font-size: 14px;
-    margin: 10px 0px 0px 15px;  
+    margin: 10px 0px 10px 15px;  
   }
 
   .texto_grupo_comunidad {
@@ -245,13 +246,12 @@ $color-fondo: #F1F0F0;
 	flex-direction: column;
 	align-items: flex-start;
 	margin-left: 55px;
-	padding: 25px 15px;
-	margin-bottom: 25px;
+	padding: 25px 0px 10px 0px;
 	
   .card {
     width: 250px;
     display: flex;
-		align-content: center;
+	align-content: center;
     margin-bottom: 25px;
   
     img {
@@ -429,6 +429,8 @@ $color-fondo: #F1F0F0;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		padding-top: 10px;
+		padding-bottom: 10px;
 
 		.card_producto {
 			display: flex;
@@ -443,7 +445,7 @@ $color-fondo: #F1F0F0;
 
 				span{
 					margin-left: 20px;
-					padding-top: 30px;
+					padding-top: 25px;
 				}
 
 			}

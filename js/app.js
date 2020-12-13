@@ -357,7 +357,11 @@ let mostrarProduccion = (comunidad) => {
     };
 
     const botonConfirmar = document.getElementById("botonConfirmar");
-    botonConfirmar.addEventListener("click", () => obtenerInformacion());
+    botonConfirmar.addEventListener("click", () => {
+        obtenerInformacion();
+        getComunidad(comunidad.id)
+    }
+    );
   })
 
   const nav_inicio = document.getElementById("detalle_page_3");

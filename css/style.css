@@ -213,7 +213,8 @@
 }
 
 .comunidad_individual {
-  height: 150px;
+  padding-top: 20px;
+  height: 160px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -229,7 +230,7 @@
 .comunidad_individual h4 {
   font-weight: 600;
   font-size: 14px;
-  margin: 10px 0px 0px 15px;
+  margin: 10px 0px 10px 15px;
 }
 
 .comunidad_individual .texto_grupo_comunidad {
@@ -288,8 +289,7 @@
       -ms-flex-align: start;
           align-items: flex-start;
   margin-left: 55px;
-  padding: 25px 15px;
-  margin-bottom: 25px;
+  padding: 25px 0px 10px 0px;
 }
 
 #en_producción .card {
@@ -509,6 +509,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .container_tres .productos_disponibles .card_producto {
@@ -536,7 +538,7 @@
 
 .container_tres .productos_disponibles .card_producto .imagen span {
   margin-left: 20px;
-  padding-top: 30px;
+  padding-top: 25px;
 }
 
 .container_tres .modal {
