@@ -282,9 +282,9 @@ $color-fondo: #F1F0F0;
 		outline: none;
 		width: 185px;;
 		font-size: 13px;
-		padding: 10px;
+		padding: 7px;
 		border-radius: 2px;
-
+		line-height: 20px;
 	}
 }
 
@@ -409,7 +409,7 @@ $color-fondo: #F1F0F0;
 			outline: none;
 			width: 260px;
 			font-size: 13px;
-			padding: 10px;
+			padding: 15px;
 			border-radius: 2px;
 			margin-bottom: 15px;
 			}
@@ -477,7 +477,7 @@ $color-fondo: #F1F0F0;
 			outline: none;
 			width: 260px;
 			font-size: 13px;
-			padding: 10px;
+			padding: 15px;
 			border-radius: 2px;
 			margin: 25px 0 15px 0;
 			}
@@ -596,7 +596,8 @@ button {
 		#container .grupo {
 			height: 220px;
 			text-align: center;
-			padding-bottom: 10px;
+			padding-top: 20px;
+			padding-bottom: 20px;
 		}
 		#container .grupo .title {
 			display: block;
@@ -605,7 +606,7 @@ button {
 		#container .grupo .texto_grupo {
 			display: block;
 			.button{
-				margin-top: 20px;
+				margin-top: 5px;
 				padding:17px
 			}
 		}
