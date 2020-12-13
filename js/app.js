@@ -361,7 +361,6 @@ let mostrarProduccion = (comunidad) => {
     const botonConfirmar = document.getElementById("botonConfirmar");
     botonConfirmar.addEventListener("click", () => {
         obtenerInformacion(comunidad.id);
-        getComunidad(comunidad.id)
     }
     );
   })
@@ -454,7 +453,7 @@ let guardarActualizacion = (comunidadId, productos, aclaracion, enviarMensaje) =
       headers: {"Content-type": "application/json"}
    })
    .then(response => response.json()) 
-   .then(json => console.log(json))
+   .then(json => mostrarComunidad(json))
    .catch(err => {
     console.log(err);
    })
