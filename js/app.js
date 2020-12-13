@@ -202,6 +202,7 @@ let mostrarComunidad = (comunidad) => {
     <div class="separator"> </div>
     <div id="en_producción">
       <h3>    Artesanías en curso </h3>
+      <br>
     </div>
     <div class="botones_actualizar">
       <button class="actualizar_produccion">ACTUALIZAR PRODUCCIÓN</button>                        
