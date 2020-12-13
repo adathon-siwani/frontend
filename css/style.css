@@ -530,12 +530,13 @@
 .container_tres .modal {
   position: fixed;
   z-index: 3;
-  top: 5%;
-  left: 10%;
+  top: 40%;
+  bottom: 0;
+  right: 0;
+  left: 30%;
   width: 290px;
   height: 250px;
   background-color: #F9F9FA;
-  padding: 15px;
   border: 6px solid #F1F0F0;
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);

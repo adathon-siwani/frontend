@@ -93,10 +93,10 @@ const comunidades = [
 const container = document.getElementById("container");
 let contenido = "";
 let nav_change = document.getElementById("nav");
-const url = "https://adathon-siwani.herokuapp.com/api/comunidades";
+const url = "https://adathon-siwani.herokuapp.com/api";
 
 let getData = () => {
-  fetch(url)
+  fetch(url+"/comunidades")
     .then((res) => res.json())
     .then((data) => {
       dibujarGrilla(data);
@@ -108,7 +108,16 @@ let getData = () => {
 };
 
 let getComunidad = (comunidadId) => {
-  return comunidades[0];
+  fetch(url+`/comunidad/${comunidadId}`)
+  .then((res) => res.json())
+  .then((data) => {
+      mostrarComunidad(data);
+  })
+  .catch((error) => {
+    console.log(error);
+    mostrarComunidad(comunidades[0])
+  });
+
 };
 
 let dibujarGrilla = (comunidades) => {
@@ -133,7 +142,7 @@ let dibujarGrilla = (comunidades) => {
   const button = document.getElementsByClassName("button");
   for (let i = 0; i < button.length; i++) {
     button[i].addEventListener("click", () => {
-      mostrarComunidad(comunidades[i].id);
+      getComunidad(comunidades[i].id);
     });
   };
 };
@@ -150,8 +159,7 @@ let nombreProductos = (productosActuales) => {
   return "Sin Producción";
 };
 
-let mostrarComunidad = (comunidadId) => {
-  let comunidad = getComunidad(comunidadId);
+let mostrarComunidad = (comunidad) => {
   nav_change.innerHTML = `
         <div id="detalle_page_2">
           <div class="icon_boton">
@@ -168,7 +176,7 @@ let mostrarComunidad = (comunidadId) => {
   las_comunidades_div = document.getElementById("first-section");
   las_comunidades_div.innerHTML = `
     <div class="comunidad_individual_title">
-      <p>${comunidad.nombre}</p>
+      <p>${comunidad?.nombre}</p>
     </div>
       `;
   container.innerHTML = "";
@@ -176,11 +184,11 @@ let mostrarComunidad = (comunidadId) => {
   contenido = `
     <div class = "comunidad_individual"> 
       <div class="title">                        
-        <h4>Delegada: ${comunidad.delegada}</h4>
+        <h4>Delegada: ${comunidad?.delegada}</h4>
       </div>
       <div class="texto_grupo_comunidad">
         <div class="text_body_comunidad">
-          <h5> Teléfono: ${comunidad.teléfono}</h5>
+          <h5> Teléfono: ${comunidad?.teléfono}</h5>
         </div>
                           
         <div class="boton_grupo">
@@ -298,7 +306,7 @@ let mostrarProduccion = (comunidad) => {
               </div>
             </form>
             <div class="botones">
-              <button class="actualizar button" id="botonConfirmar">ACTUALIZAR PRODUCCIÓN</button>
+              <button class="actualizar button" >ACTUALIZAR PRODUCCIÓN</button>
               <button class="cancelar button">Cancelar</button>
             </div>
             <div class="modal">
@@ -313,7 +321,7 @@ let mostrarProduccion = (comunidad) => {
   const button_cancelar = document.querySelector(".cancelar");
   button_cancelar.onclick = e => {
     container.innerHTML = " "
-    mostrarComunidad(comunidad)
+    getComunidad(comunidad.id);
   }
 
   const button_actualizar = document.getElementsByClassName("actualizar");
@@ -330,7 +338,7 @@ let mostrarProduccion = (comunidad) => {
       <div class="modal_content">
         <p>Vas a actualizar la producción de <span>${comunidad.nombre}</span>.</p>
         <p>¿Querés avanzar?</p>
-        <button class="confirmar">CONFIRMAR PRODUCCIÓN</button>
+        <button class="confirmar" id="botonConfirmar">CONFIRMAR PRODUCCIÓN</button>
         <button class="cerrar">Cancelar</button>
       </div>
     `;
@@ -347,6 +355,9 @@ let mostrarProduccion = (comunidad) => {
     overlay.classList.remove("overlay");
     modal.innerHTML ="";
     };
+
+    const botonConfirmar = document.getElementById("botonConfirmar");
+    botonConfirmar.addEventListener("click", () => obtenerInformacion());
   })
 
   const nav_inicio = document.getElementById("detalle_page_3");
@@ -365,8 +376,7 @@ let mostrarProduccion = (comunidad) => {
        getData();
     })
 
-  const botonConfirmar = document.getElementById("botonConfirmar");
-  botonConfirmar.addEventListener("click", () => obtenerInformacion());
+
 };  
 
 
@@ -425,15 +435,15 @@ let obtenerInformacion = () => {
   guardarActualizacion(produccion, comentario, activarMensajes);
 };
 
-let guardarActualizacion = (a, b, c) => {
-  console.log(a, b, c);
+let guardarActualizacion = (id, mensaje, activarMensaje) => {
+  console.log(id, mensaje, activarMensaje);
 
-   fetch('', {
+   fetch(url, {
       method: "POST",
       body: JSON.stringify({
-        productos: a,
-        textoMensaje: b,
-        mensaje: c
+        productos: id,
+        textoMensaje: mensaje,
+        mensaje: activarMensaje
       }),
       headers: {"Content-type": "application/json"}
    })
