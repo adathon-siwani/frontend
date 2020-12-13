@@ -116,7 +116,7 @@ let getComunidad = (comunidadId) => {
   })
   .catch((error) => {
     console.log(error);
-    mostrarComunidad(comunidades[0])
+    //mostrarComunidad(comunidades[0])
   });
 
 };
@@ -129,7 +129,7 @@ let dibujarGrilla = (comunidades) => {
                     </div>
                     <div class="texto_grupo">                       
                       <div class="text_body">
-                      <h5> En producción: ${nombreProductos(comunidades[i].produccionActual[i])}</h5> 
+                      <h5> En producción: ${nombreProductos(comunidades[i].produccionActual)}</h5> 
                       </div>
                        
                       <div class="boton_grupo">
@@ -149,10 +149,10 @@ let dibujarGrilla = (comunidades) => {
 };
 
 let nombreProductos = (productosActuales) => {
-  if (productosActuales) {
+  if (productosActuales && productosActuales.length >0) {
     var productos = "";
     for (let index = 0; index < productosActuales.length; index++) {
-      productos += productosActuales[index].nombre + " ";
+      productos += productosActuales[index].nombre + "\n ";
     }
     return productos;
   }
@@ -184,11 +184,11 @@ let mostrarComunidad = (comunidad) => {
   contenido = `
     <div class = "comunidad_individual"> 
       <div class="title">                        
-        <h4>Delegada: ${comunidad?.delegada}</h4>
+        <h4>Delegada: ${comunidad.delegada.nombre}</h4>
       </div>
       <div class="texto_grupo_comunidad">
         <div class="text_body_comunidad">
-          <h5> Teléfono: ${comunidad?.teléfono}</h5>
+          <h5> Teléfono: ${comunidad.delegada.telefono}</h5>
         </div>
                           
         <div class="boton_grupo">
@@ -221,6 +221,8 @@ let mostrarComunidad = (comunidad) => {
 
   const nav_inicio = document.getElementById("detalle_page_2");
   const button_volver = document.getElementsByClassName("boton_volver");
+  
+  
   button_volver[0].addEventListener("click", () => {
     nav_inicio.innerHTML = ''
       nav_inicio.innerHTML = `
@@ -233,7 +235,7 @@ let mostrarComunidad = (comunidad) => {
   });
 };
 
-
+const  urlFotos = "https://raw.githubusercontent.com/adathon-siwani/siwani-products/master/imgs_sm/" 
 
 let dibujarProduccionActual = (produccionActual) => {
   let mostrar_produccion = document.getElementById("en_producción");
@@ -243,7 +245,7 @@ let dibujarProduccionActual = (produccionActual) => {
     contenido_produccion = `
       <div class="card">
         <div>
-          <img src="${produccionActual[i].imagen}"/>
+          <img src="${urlFotos}${produccionActual[i].imagen}"/>
         </div>
         <div class="card-text">
           <p>${produccionActual[i].nombre}</p>
@@ -301,7 +303,7 @@ let mostrarProduccion = (comunidad) => {
             <form method="POST" action="">
               <textarea id="comentario" name="comentario" rows="10" cols="30" placeholder="Necesitamos..." ></textarea>
               <div class="input">
-                <input type="checkbox" class ="checkbox" checked id="mensajeWhatsapp" >
+                <input type="checkbox" class ="checkbox" id="mensajeWhatsapp" >
                   <span> Enviar SMS/WhatsApp</span>
               </div>
             </form>
@@ -358,7 +360,7 @@ let mostrarProduccion = (comunidad) => {
 
     const botonConfirmar = document.getElementById("botonConfirmar");
     botonConfirmar.addEventListener("click", () => {
-        obtenerInformacion();
+        obtenerInformacion(comunidad.id);
         getComunidad(comunidad.id)
     }
     );
@@ -396,11 +398,11 @@ let mostrar_productos = (produccion, produccionActual) => {
         <div class="casilla"> 
           <form method="GET" action="">
             <input class ="checkbox checkbox-producto" type="checkbox" 
-              id="producto${produccion[i].id}" value="${produccion_comunidad_1[i].id}" checked>
+              id="producto${produccion[i].id}" value="${produccion[i].id}" checked>
           </form>
         </div>
         <div class="imagen">
-          <img src="${produccion[i].imagen}"/>
+          <img src="${urlFotos}${produccion[i].imagen}"  width="80" height="80"/>
           <span>${produccion[i].nombre}</span>
         </div>
       </div>`;
@@ -424,7 +426,7 @@ let chequearId = (id, produccionActual) => {
   }
 };
 
-let obtenerInformacion = () => {
+let obtenerInformacion = (comunidadId) => {
   let produccion = [];
   let comentario = document.getElementById("comentario").value;
   let activarMensajes = document.getElementById("mensajeWhatsapp").checked;
@@ -436,18 +438,18 @@ let obtenerInformacion = () => {
     }
   }
 
-  guardarActualizacion(produccion, comentario, activarMensajes);
+  guardarActualizacion(comunidadId, produccion, comentario, activarMensajes);
 };
 
-let guardarActualizacion = (id, mensaje, activarMensaje) => {
-  console.log(id, mensaje, activarMensaje);
+let guardarActualizacion = (comunidadId, productos, aclaracion, enviarMensaje) => {
+  console.log(productos, aclaracion, enviarMensaje);
 
-   fetch(url, {
+   fetch(url+"/comunidad/" + comunidadId + "/produccion", {
       method: "POST",
       body: JSON.stringify({
-        productos: id,
-        textoMensaje: mensaje,
-        mensaje: activarMensaje
+        aclaracion,
+        enviarMensaje,
+        productos,
       }),
       headers: {"Content-type": "application/json"}
    })

@@ -431,6 +431,7 @@ $color-fondo: #F1F0F0;
 		align-items: center;
 		padding-top: 10px;
 		padding-bottom: 10px;
+		padding-left: 20px;
 
 		.card_producto {
 			display: flex;
@@ -469,6 +470,7 @@ $color-fondo: #F1F0F0;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
+			padding: 10px;
 
 			p {
 				font-size: 15px;
