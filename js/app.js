@@ -93,6 +93,7 @@ const comunidades = [
 const container = document.getElementById("container");
 let contenido = "";
 let nav_change = document.getElementById("nav");
+let las_comunidades_div = document.getElementById("first-section");
 const url = "https://adathon-siwani.herokuapp.com/api";
 
 let getData = () => {
@@ -173,7 +174,6 @@ let mostrarComunidad = (comunidad) => {
           </div>
         </div>                        
     `;
-  las_comunidades_div = document.getElementById("first-section");
   las_comunidades_div.innerHTML = `
     <div class="comunidad_individual_title">
       <p>${comunidad?.nombre}</p>
@@ -397,7 +397,7 @@ let mostrar_productos = (produccion, produccionActual) => {
         </div>
         <div class="imagen">
           <img src="${produccion[i].imagen}"/>
-          <p>${produccion[i].nombre}</p>
+          <span>${produccion[i].nombre}</span>
         </div>
       </div>`;
 

@@ -438,13 +438,21 @@ $color-fondo: #F1F0F0;
 
 			.imagen {
 				margin: 15px;
+				display: flex;
+				justify-content: center;
+
+				span{
+					margin-left: 20px;
+					padding-top: 30px;
+				}
+
 			}
 		}
 	}
 .modal {
 		position: fixed;;
 		z-index: 3;
-		top: 40%;
+		top: 30%;
 		bottom: 0;
 		right: 0;
 		left: 10%;

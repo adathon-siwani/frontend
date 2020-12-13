@@ -526,12 +526,23 @@
 
 .container_tres .productos_disponibles .card_producto .imagen {
   margin: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container_tres .productos_disponibles .card_producto .imagen span {
+  margin-left: 20px;
+  padding-top: 30px;
 }
 
 .container_tres .modal {
   position: fixed;
   z-index: 3;
-  top: 40%;
+  top: 30%;
   bottom: 0;
   right: 0;
   left: 10%;
