@@ -91,7 +91,7 @@ const comunidades = [
 ];
 
 const container = document.getElementById("container");
-const url = "endopoint";
+const url = "https://adathon-siwani.herokuapp.com/api/comunidades";
 
 let getData = () => {
   fetch(url)
@@ -112,15 +112,15 @@ let dibujarGrilla = (comunidades) => {
     contenido = ` <div class = "grupo" id= "grupo${comunidades[i].id}"> 
                        <div class="title">
                        
-                       <h4> ${comunidades[i].nombre}</h4><h4>Delegada: ${
-      comunidades[i].delegada
+                       <h4> Grupo ${comunidades[i].id}</h4><h4>Delegada: ${
+      comunidades[i].nombre
     }</h4>
                        </div>
                        <div class="texto_grupo">
                        
                        <div class="text_body">
                        <h5> En producción: ${nombreProductos(
-                         comunidades[i].produccionActual
+                         comunidades[i].produccionActual[i]
                        )}</h5> 
                        </div>
                        
@@ -256,7 +256,7 @@ let mostrarProduccion = (comunidad) => {
                   <form method="POST" action="">
                   <h4>¿Querés dejar una aclaración?</h4>
                   <form method="POST" action="">
-                  <textarea id="comentario" name="comentario" rows="10" cols="30" placeholder="Necesitamos..."></textarea>
+                  <textarea id="comentario" name="comentario" rows="10" cols="30" placeholder="Necesitamos..." ></textarea>
                   <div class="input">
                   <input type="checkbox" class ="checkbox" checked id="mensajeWhatsapp" >
                       <span> Enviar SMS/WhatsApp</span>
@@ -317,7 +317,7 @@ let chequearId = (id, produccionActual) => {
 
 let obtenerInformacion = () => {
   let produccion = [];
-  let comentario = document.getElementById("comentario"); // buscar el mensaje
+  let comentario = document.getElementById("comentario").value;
   let activarMensajes = document.getElementById("mensajeWhatsapp").checked;
   let arrayProductos = document.getElementsByClassName("checkbox-producto");
 
@@ -332,6 +332,22 @@ let obtenerInformacion = () => {
 
 let guardarActualizacion = (a, b, c) => {
   console.log(a, b, c);
+
+   fetch('', {
+      method: "POST",
+      body: JSON.stringify({
+        productos: a,
+        textoMensaje: b,
+        mensaje: c
+      }),
+      headers: {"Content-type": "application/json"}
+   })
+   .then(response => response.json()) 
+   .then(json => console.log(json))
+   .catch(err => {
+    console.log(err);
+   })
+
 };
 
 getData();
