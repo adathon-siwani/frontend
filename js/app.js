@@ -305,7 +305,7 @@ let mostrarProduccion = (comunidad) => {
             <form method="POST" action="">
               <textarea id="comentario" name="comentario" rows="10" cols="30" placeholder="Necesitamos..." ></textarea>
               <div class="input">
-                <input type="checkbox" class ="checkbox" checked id="mensajeWhatsapp" >
+                <input type="checkbox" class ="checkbox" id="mensajeWhatsapp" >
                   <span> Notificar con un SMS/WhatsApp <br>     la actualización</span>
               </div>
             </form>
